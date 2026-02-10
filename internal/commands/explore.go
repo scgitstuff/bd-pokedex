@@ -3,7 +3,7 @@ package commands
 import (
 	"fmt"
 
-	"github.com/scGetStuff/pokedex/internal/pokewrap"
+	"github.com/scgitstuff/pokedex/internal/pokewrap"
 )
 
 func commandExplore(cmdArgs []string) error {

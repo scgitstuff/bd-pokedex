@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/scGetStuff/pokedex/internal/pokewrap"
+	"github.com/scgitstuff/pokedex/internal/pokewrap"
 )
 
 // TODO: all the package variables should be pulled into a User struct

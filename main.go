@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/scGetStuff/pokedex/internal/commands"
+	"github.com/scgitstuff/pokedex/internal/commands"
 )
 
 func main() {

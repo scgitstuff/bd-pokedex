@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/scGetStuff/pokedex/internal/pokecache"
+	"github.com/scgitstuff/pokedex/internal/pokecache"
 )
 
 const (
@@ -45,11 +45,9 @@ func GetLocationAreaPage(mapPage int) (LocationAreaPage, error) {
 
 	var data []byte
 	var hit bool
+	var err error
 	data, hit = cache.Get(url)
 	if !hit {
-		// this is important
-		// `data, err :=` would create a block variable and fuck everything up
-		var err error
 		data, err = getBytes(url)
 		if err != nil {
 			return LocationAreaPage{}, err
@@ -75,11 +73,9 @@ func GetLocationAreaEncounter(loc string) (LocationAreaEncounter, error) {
 
 	var data []byte
 	var hit bool
+	var err error
 	data, hit = cache.Get(url)
 	if !hit {
-		// this is important
-		// `data, err :=` would create a block variable and fuck everything up
-		var err error
 		data, err = getBytes(url)
 		if err != nil {
 			return LocationAreaEncounter{}, err
@@ -105,11 +101,9 @@ func GetPokemon(name string) (Pokemon, error) {
 
 	var data []byte
 	var hit bool
+	var err error
 	data, hit = cache.Get(url)
 	if !hit {
-		// this is important
-		// `data, err :=` would create a block variable and fuck everything up
-		var err error
 		data, err = getBytes(url)
 		if err != nil {
 			return Pokemon{}, err

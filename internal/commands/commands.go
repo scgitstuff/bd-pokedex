@@ -23,7 +23,7 @@ func GetCommandsMap() map[string]CliCommand {
 				Callback:    commandMap,
 			},
 			"mapb": {
-				Description: "Displays 20 Pokemon world locations at a time",
+				Description: "Displays previous 20 Pokemon world locations at a time",
 				Callback:    commandMapb,
 			},
 			"explore": {
